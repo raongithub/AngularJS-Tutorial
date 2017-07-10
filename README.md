@@ -1,2 +1,2 @@
 # AngularJS-Tutorial
-AngularJS - Complete (Fundamentals to Advanced)
+AngularJS - The complete (Fundamentals to Advanced)
