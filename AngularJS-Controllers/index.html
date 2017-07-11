@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>AngularJS-Tutorial</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular.min.js"></script>
+        <script>
+            // defining a controller and instantiating a controller
+            var app = angular.module("app", []);
+
+            // create controller and it's definition
+            app.controller("Controller", function () {
+                this.name = "Angular";
+                this.what = "is a JavaScript Framework";
+            });
+        </script>
+    </head>
+    <body ng-app="app">
+        <div ng-controller="Controller as con">
+            Hello, <strong>{{ con.name }} {{ con.what }}.</strong>
+        </div>
+    </body>
+</html> 
