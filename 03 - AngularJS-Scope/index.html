@@ -9,7 +9,7 @@
         <script>
             // Implicit controller instance and using $scope in a controller
             var app = angular.module("app", []);
-
+            
             app.controller("Controller", function ($scope) {
                 $scope.name = "Angular";
                 $scope.info = "is a JavaScript Framework";
@@ -19,11 +19,23 @@
             //     $scope.name = "Angular";
             //     $scope.info = "is a JavaScript Framework";
             // }]);
+
+            // app.controller("Controller", ["$scope", function ($scope) {
+            //     $scope.x = this;
+            //     this.name = "Angular";
+            //     this.info = "is a JavaScript Framework";
+            // }]);
         </script>
     </head>
     <body ng-app="app">
         <div ng-controller="Controller">
             Hello, <strong>{{ name }}  {{ info }}.</strong> 
         </div>
+
+        <!--
+        <div ng-controller="Controller as x">
+            Hello, <strong>{{ x.name }}  {{ x.info }}.</strong> 
+        </div>
+        -->
     </body>
 </html> 
