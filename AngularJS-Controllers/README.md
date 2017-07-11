@@ -21,4 +21,6 @@ AngularJS Controllers
     * Usually attached to a DOM element using "ng-controller" attribute (directive).
         > Gets Instantiated
     * In other words, exposes data (Model) to be consumed by Views (one-way Data Binding).
-        > Also send takes data from Views (two-way Data Binding)                
+        > Also send takes data from Views (two-way Data Binding)
+    * Can create multiple controllers in a single angular module.
+    * Can have several angular module as part of the application.                    
