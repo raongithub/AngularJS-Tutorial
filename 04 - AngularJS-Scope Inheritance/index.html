@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>AngularJS-Tutorial</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular.min.js"></script>
+        <script>
+            // scope hierarchy
+            // child scope merged to parent (using prototypal inheritance)
+            var app = angular.module("app", []);
+
+            app.controller("Person", ["$scope", function ($scope) {
+                $scope.person = "Krish";
+            }]);
+
+            app.controller("PersonDetail", ["$scope", function ($scope) {
+                $scope.email = "krish@gmail.com";
+                $scope.address = "USA";
+                $scope.salary = 5000;
+                $scope.department = "IT";
+            }]);
+
+            app.controller("PersonPayCheck", ["$scope", function ($scope) {
+                $scope.getTax = function () {
+                    return $scope.salary * 30 / 100
+                };
+
+                $scope.getNet = function () {
+                    return $scope.salary - $scope.getTax();
+                };
+            }]);
+
+        </script>
+    </head>
+    <body>
+        <div ng-app="app">
+            
+            <div ng-controller="Person">
+                Name of the person is  <strong>{{ person }}</strong>.
+                
+                
+                <div ng-controller="PersonDetail">
+                    <!-- parent scope is merged to child scope
+                    - child properties get the priority -->
+                    Name of the person is <strong>{{ person }}</strong> and his email is {{ email }}. <strong>{{ person }}</strong> is residing in {{ address }}.
+
+                    <div ng-controller="PersonPayCheck">
+                        Tax: {{ getTax() }} <br>
+                        Net: {{ getNet() }}
+                    </div>
+
+                </div>
+                
+            </div>
+
+        </div>
+    </body>
+</html> 
