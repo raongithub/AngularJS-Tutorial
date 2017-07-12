@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>AngularJS-Tutorial</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-app="app">
+        <div ng-controller="FirstController">
+
+            <!-- One Time Binding -->
+            Initial value of first number is {{ ::num1 }} <br>
+            Initial value of second number is {{ ::num2 }}
+
+            <hr>
+
+            <div>
+                <!-- One Way Binding -->
+                Value of first number is {{ num1 }} <br>
+                Value of second number is {{ num2 }}
+            </div>
+
+            <hr>
+            <!-- One Way Binding -->
+            Value of first number is <span ng-bind="num1"></span> <br>
+            Value of second number is <span ng-bind="num2"></span>
+
+            <hr>
+            <!-- One Way Binding -->
+            Sum of first number and second number is {{ sum }} <br>
+            <button ng-click="doCalculateAndSum()">Click</button>
+
+        </div>
+
+        <div ng-controller="SecondController">
+            <br>
+            <!-- Two Way Binding -->
+            Value of first number is {{ num1 }} <br>
+            <input type="text" ng-model="num1" /> <br>
+
+            Value of second number is {{ num2 }} <br>
+            <input type="text" ng-model="num2" /> <br>
+            
+            Sum of first number and second number is {{ sum }} <br>
+            <button ng-click="doSum()">Click</button>
+        </div>
+
+    </body>
+</html>
