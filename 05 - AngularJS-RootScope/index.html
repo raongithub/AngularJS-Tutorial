@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>AngularJS-Tutorial</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular.min.js"></script>
+        <script>
+            // root scope
+            // the scope available at module level
+            var app = angular.module("app", []);
+
+            app.controller("PersonController", ["$scope", "$rootScope", function ($scope, $rootScope) {
+                $scope.name = "Krish";
+                $rootScope.TaxPercent = 50;
+            }]);
+
+            app.controller("PersonDetailController", ["$scope", function ($scope) {
+                $scope.salary = 5000;
+                $scope.department = "IT";
+            }]);
+
+            app.controller("PersonPayCheckController", ["$scope", "$rootScope", function ($scope, $rootScope) {
+                $scope.getTax = function () {
+                    return $scope.salary * $rootScope.TaxPercent / 100;
+                };
+
+                $scope.getNet = function () {
+                    return $scope.salary - $scope.getTax();
+                };
+            }]);
+
+        </script>
+    </head>
+    <body>
+        <div ng-app="app">
+            
+            <div ng-controller="PersonController">
+                Name of the person is  <strong>{{ name }}</strong>.
+                
+                
+                <div ng-controller="PersonDetailController">
+                    <!-- parent scope is merged to child scope
+                    - child properties get the priority -->
+                    Name of the person is <strong>{{ name }}</strong>. His salary is {{ salary }} and he working in <strong>{{ department }}</strong> department.
+
+                    <div ng-controller="PersonPayCheckController">
+                        Tax: {{ getTax() }} <br>
+                        Net: {{ getNet() }}
+                    </div>
+
+                </div>
+                
+            </div>
+
+        </div>
+    </body>
+</html> 
