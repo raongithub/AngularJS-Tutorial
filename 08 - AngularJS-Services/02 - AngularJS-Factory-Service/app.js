@@ -1,3 +1,4 @@
+// using factory service
 var app = angular.module("app", []);
 
 app.controller("FirstController", ["$scope", "FirstFactory", function ($scope, FirstFactory) {
