@@ -13,7 +13,11 @@ app.controller("FirstController", ["$scope", "FirstService", function ($scope, F
 }]);
 
 app.provider("FirstService", function () {
-    var baseURL = "http://localhost:4467";
+    var baseURL = "";
+
+    this.config = function (url) {
+        baseURL = url;
+    };
     
     this.$get = ["$http", "$log", function ($http, $log) {
         $log.log("Instantiating FirstService...");
@@ -36,5 +40,5 @@ app.provider("FirstService", function () {
 });
 
 app.config(["FirstServiceProvider", function (FirstServiceProvider) {
-
+    FirstServiceProvider.config("http://localhost:4467");
 }]);
