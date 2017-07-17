@@ -13,4 +13,4 @@ AngularJS Filters
         > Built-in (comes with AngularJS)
             >> number, date, filter, uppercase, lowercase, orderBy etc.
         > Custom
-            >> developed by us        
+            >> developed by us
