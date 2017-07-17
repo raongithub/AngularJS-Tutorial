@@ -26,7 +26,7 @@ app.provider("FirstService", function () {
                 fnCallback(res.data);
             },
             function (res) {
-                $log.error("ERROR occurred...")
+                $log.error("ERROR occurred...");
             });
         };
         return providerObject;
