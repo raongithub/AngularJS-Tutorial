@@ -27,7 +27,7 @@ app.directive("messageDirective", function ($interpolate) {
                         instanceElement.css(
                             {
                                 "border": "1px solid blue",
-                                "background-color": "red",
+                                "background-color": "red"
                             }
                         );
                     }
