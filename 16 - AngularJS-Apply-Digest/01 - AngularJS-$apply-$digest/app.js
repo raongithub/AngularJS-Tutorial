@@ -17,7 +17,7 @@ var getTheSum = function () {
         $scope.sum = parseInt($scope.num1) + parseInt($scope.num2);
     });
 
-    // Solution 1
+    // Solution 2
     // $scope.sum = parseInt($scope.num1) + parseInt($scope.num2);
     // $scope.$apply();
 };
