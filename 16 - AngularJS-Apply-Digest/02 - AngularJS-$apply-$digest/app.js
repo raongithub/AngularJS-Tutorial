@@ -14,7 +14,7 @@ app.directive("firstDirective", function () {
         templateUrl: "directive.html",
 
         compile: function ( templateElement, templateAttribute ) {
-            return(function (scope, instanceElement, instanceAttribute, controller ) {
+            return (function ( scope, instanceElement, instanceAttribute, controller ) {
                 instanceElement.find("#btnSum").on("click", scope.btnClick);
             });
         },
