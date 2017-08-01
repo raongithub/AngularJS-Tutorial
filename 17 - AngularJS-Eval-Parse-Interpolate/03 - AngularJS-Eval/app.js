@@ -5,11 +5,11 @@ app.controller("FirstController", ["$scope", "$parse", function ($scope, $parse)
     $scope.num2 = 20;
 
     $scope.object = {
-            name: "Krish",
-            address: {
-                country: "India"
-            }
-        };
+        name: "Krish",
+        address: {
+            country: "India"
+        }
+    };
     // Solution 8
     $scope.fnEval = function () {
         // Modify scope while evaluating
