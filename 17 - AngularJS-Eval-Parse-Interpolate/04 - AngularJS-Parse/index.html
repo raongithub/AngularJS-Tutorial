@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AngularJS-Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="app">
+    <div id="container" ng-controller="FirstController">
+        <h6>Please click the button to see the $parse alert</h6>
+
+        <!--Solution 1-->
+        <button ng-click="firstFnParse()">Click</button>
+
+        <!--Solution 2-->
+        <hr>
+        <button ng-click="secondFnParse()">Click</button>
+
+        <!--Solution 3-->
+        <hr>
+        <button ng-click="thirdFnParse()">Click</button>
+
+        <!--Solution 4-->
+        <hr>
+        <button ng-click="fourthFnParse()">Click</button>
+    </div>
+</body>
+</html>

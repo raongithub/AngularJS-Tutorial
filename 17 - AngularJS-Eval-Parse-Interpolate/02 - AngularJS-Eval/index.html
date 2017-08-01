@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AngularJS-Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="app">
+    <div id="container" ng-controller="FirstController">
+        Number 1 = {{ num1 }} <br>
+        Number 2 = {{ num2 }} <br>
+
+        Result = {{ num1 * num2 }}
+
+        <hr>
+        <!--Attempt 1-->
+        <button ng-click="fnAlert()">Click</button>
+
+        <!--Attempt 2-->
+        <hr>
+        <button ng-click="newNumAlert()">Click</button>
+
+        <!--Attempt 3-->
+        <hr>
+        <button ng-click="addNewNum3()">Click</button>
+
+        <!--Attempt 4-->
+        <hr>
+        <button ng-click="addNewNum2Value()">Click</button>
+
+        <!--Attempt 5-->
+        <hr>
+        <button ng-click="objectAlert()">Click</button>
+
+        <!--Attempt 6-->
+        <hr>
+        <button ng-click="fnEval()">Click</button>
+
+        <!--Attempt 7-->
+        <hr>
+        <button ng-click="fnObjectEval()">Click</button>
+    </div>
+</body>
+</html>

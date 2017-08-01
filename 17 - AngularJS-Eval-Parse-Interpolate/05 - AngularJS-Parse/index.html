@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AngularJS-Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="app">
+    <div id="container" ng-controller="FirstController">
+        <h6>Please click the button</h6>
+        <!--Solution 8-->
+        <hr>
+        <button ng-click="fifthFnParse()">Click</button>
+        {{ object.address.country }}
+    </div>
+</body>
+</html>
