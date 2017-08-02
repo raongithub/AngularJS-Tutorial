@@ -12,10 +12,22 @@
 <body ng-app="app">
     <div id="container" ng-controller="FirstController">
         <h6>Please click the button</h6>
-        <!--Solution 8-->
+
         <hr>
-        <button ng-click="fifthFnParse()">Click</button>
+        <button ng-click="fnParse()">Click</button>
         {{ object.address.country }}
+
+        <!-- Solution 1 -->
+        <hr>
+        <button ng-click="FirstFnInterpolate()">Click</button>
+
+        <!-- Solution 2 -->
+        <hr>
+        <button ng-click="SecondFnInterpolate()">Click</button>
+
+        <!-- Solution 3 -->
+        <hr>
+        <button ng-click="ThirdFnInterpolate()">Click</button>
     </div>
 </body>
 </html>
