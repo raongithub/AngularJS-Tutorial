@@ -21,3 +21,4 @@ Angular $eval $parse $interpolate
     > We can use the expression which is used in the "View" in "$interpolate". For ex. $interpolate("Result = {{ num1 * num2 }}");
     > $interpolate should be injected in order to use
     > $interpolate works with $parse
+    > $interpolate cannot change the values of the respective context ($scope) because it's read-only
