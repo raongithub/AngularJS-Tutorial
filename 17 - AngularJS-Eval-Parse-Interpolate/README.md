@@ -2,7 +2,7 @@ Angular $eval $parse $interpolate
 
 * $eval
     > $eval can only work with the current scope
-    > use ($scope.$eval) to make $eval work + the expression should be provided in the form of a string ( "num1 * num2" ))
+    > use ($scope.$eval) to make $eval work + the expression should be provided in the form of a string ( "num1 * num2" )
 
 * $parse
     > $parse return a function ie. a template function
